@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style type="text/css">
+    /* 行内元素水平居中->text-align：center  */
+    .middle1 {
+      width: 200px;
+      height: 200px;
+      background: red;
+      text-align: center;
+    }
+
+    /* 定宽块状元素水平居中->margin：0 auto  */
+    .middle2 {
+      width: 200px;
+      height: 200px;
+      background: red;
+      margin: 0 auto;
+    }
+
+    /* 不定宽块状元素水平居中->  */
+    /* 方法1: 浮动和相对定位*/
+    .middle3-1 {
+      float: left;
+      position: relative;
+      left: 50%;
+      background: yellow;
+    }
+
+    .middle3-1 .child {
+      position: relative;
+      left: -50%;
+      background: red;
+    }
+
+    /* 方法2: 绝对定位+translate*/
+    .middle3-2 {
+      background: yellow;
+    }
+    .middle3-2 .child {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform:translateX(-50%);
+      -moz-transform:translateX(-50%);
+      -ms-transform:translateX(-50%);
+      background: red;
+    }
+
+    /* 方法3: 绝对定位+margin*/
+    .middle3-3 {
+      background: yellow;
+    }
+    .middle3-3 .child {
+      position: absolute;
+      left: 50%;
+      margin-left:-50%; 
+      background: red;
+    }
+
+    /* flex 布局 */
+
+  </style>
+
+
+
+</head>
+
+<body>
+
+  <!-- 行内元素水平居中 -->
+  <div class='middle1'>
+    <span> 行内元素水平居:textalign:center</span>
+  </div>
+
+
+  <!-- 定宽块状元素水平居中 -->
+  <div class='middle2'>
+    <div>
+      定宽块状元素水平居中:margin: 0 auto
+    </div>
+    <span> 定宽块状元素水平居中:margin: 0 auto</span>
+  </div>
+
+  <!-- 不定宽块状元素水平居中 -->
+
+  <!-- <div class='middle3-1'>
+    <div class='child'>
+      不定宽块状元素水平居中3-1:
+    </div>
+  </div> -->
+
+  <!-- <div class='middle3-2'>
+    <div class='child'>
+      不定宽块状元素水平居中3-2:
+    </div>
+  </div> -->
+
+  <div class='middle3-3'>
+    <div class='child'>
+      不定宽块状元素水平居中3-3:
+    </div>
+  </div>
+
+</body>
+
+</html>
