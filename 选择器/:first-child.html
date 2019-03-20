@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>:first-child</title>
+  <style>
+    /* element:first-child：当前元素(element)的父元素的第一个element子元素 */
+    /* 也就是说：选出当前元素父元素的第一个元素&&同标签元素 */
+    .box p:first-child {
+      background-color: yellow;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <h1>欢迎访问我的主页</h1>
+    <p>这个段落是其父元素（body）的首个子元素。</p>
+    <p>这个段落不是其父元素的首个子元素。</p>
+    <div>
+      <p>这个段落是其父元素（div）的首个子元素。</p>
+      <p>这个段落不是其父元素的首个子元素。</p>
+    </div>
+  </div>
+
+</body>
+
+</html>

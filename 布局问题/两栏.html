@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 100%;
+      min-height: 500px;
+    }
+
+    .right .content {
+      width: 100px;
+      height: 100px;
+      background: yellow;
+    }
+
+    /* 1.float+margin-right */
+    /* .left {
+      float: left;
+      width: 200px;
+      min-height: 500px;
+      background: red;
+    }
+
+    .right {
+      margin-left: 200px;
+      min-height: 500px;
+      background: blue;
+    } */
+
+
+
+    /*2. flex */
+    /* .box{
+      display: flex;
+      display: -webkit-flex;
+    }
+    .left {
+      width: 200px;
+      min-height: 500px;
+      background: red;
+    }
+    .right{
+      flex: 1;
+      min-height: 500px;
+      background: blue;
+    } */
+
+    /*3. bfc：BFC的区域不会与float的元素区域重叠 */
+    .left {
+      float: left;
+      width: 200px;
+      min-height: 500px;
+      background: red;
+    }
+
+    /*   overflow: hidden; 生成bfc*/
+    .right {
+      overflow: hidden;
+      min-height: 500px;
+      background: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="left">left</div>
+    <div class="right">
+      123
+      <div class="content">1234131</div>
+    </div>
+  </div>
+</body>
+
+</html>

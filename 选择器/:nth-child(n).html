@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>:nth-child(n)</title>
+  <style>
+    /* element:nth-child：当前元素(element)的父元素的第一n个element子元素  */
+    .box p:nth-child(2) {
+      background-color: yellow;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <h1>欢迎访问我的主页</h1>
+    <p>这个段落是其父元素首个子元素。</p>
+    <p>这个段落是其父元素的2个子元素。</p>
+    <div>
+      <p>这个段落是其父元素（div）的首个子元素。</p>
+      <p>这个段落是其父元素的2个子元素。</p>
+    </div>
+  </div>
+</body>
+
+</html>

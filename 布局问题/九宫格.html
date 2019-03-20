@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>九宫格</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    div {
+      margin-top: 10px;
+      
+      /* 外边框 */
+      border: 1px solid #ebebeb;
+      width: 90%;
+      margin-left: 5%;
+    }
+
+    ul+ul {
+      /* 中间两横边框 */
+      border-top: 1px solid #ebebeb;
+    }
+
+    li {
+      width: 33.33333333333333333333%;
+      height: 40px;
+      float: left;
+      list-style: none;
+      /* padding和border计算在盒子模型里面 */
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    li+li {
+      /* 中间两竖边框 */
+      border-left: 1px solid #ebebeb;
+    }
+
+    /* 伪类清除浮动 */
+    .clearfix:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+    }
+
+    .clearfix {
+      display: inline-block;
+    }
+
+    /* Hides from IE-mac */
+    *html .clearfix {
+      height: 1%;
+    }
+
+    .clearfix {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+
+    <ul class="clearfix">
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <ul class="clearfix">
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <ul class="clearfix">
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+  </div>
+</body>
+
+</html>
