@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex布局</title>
+</head>
+<style type='text/css'>
+
+/* https://www.cnblogs.com/qcloud1001/p/9848619.html */
+
+/***
+*  1. flex-wrap:nowrap时，可以设置flex-shrink 【缩小比例】或flex-grow【放大比例】
+*   flex-shrink 【缩小比例】计算机方法：
+*
+*   flex-grow【放大比例】计算机方法：
+*
+*  2. flex-wrap:wrap时，可以设置align-content:stretch[default]
+*
+*两者“作用域”不同
+*align-content管全局(所有行视为整体)
+*align-items管单行
+*
+**/
+
+
+
+
+.box{
+    width: 500px;
+    height: 500px;
+    background: yellow;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    /* flex-wrap: nowrap; */
+    flex-wrap: wrap;
+    align-content:center;
+}
+.child1{
+    width: 200px;
+    height: 100px;
+    background: red;
+    flex-shrink: 1;
+    /* flex-grow: 2; */
+}
+
+.child2{
+    width: 200px;
+    height: 100px;
+    background: #f0f0f0;
+    flex-shrink: 1;
+    /* flex-grow: 1; */
+}
+.child3{
+    /* flex: 1; */
+    width: 400px;
+    height: 100px;
+    background: #a1a1a1;
+    flex-shrink: 1;
+    /* flex-grow: 1; */
+}
+
+</style>
+
+<script type='text/javascript'></script>
+
+<body>
+    <div class="box">
+        <div class="child1"></div>
+        <div class="child2"></div>
+        <div class="child3"></div>
+    </div>
+</body>
+
+</html>
